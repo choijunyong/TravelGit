@@ -79,7 +79,8 @@
             android:text="여행 추가"
             android:textAlignment="viewStart"
             android:textColor="#ffffff"
-            android:textSize="25sp"
+            android:textSize="23sp"
+            android:textStyle="bold"
             android:typeface="normal" />
 
         <ImageButton
@@ -121,6 +122,7 @@
             android:id="@+id/planView2"
             android:layout_width="296dp"
             android:layout_height="20dp"
+            android:background="#f16461"
             app:layout_constraintBottom_toBottomOf="@+id/planView"
             app:layout_constraintEnd_toEndOf="@+id/planView"
             app:layout_constraintStart_toStartOf="@+id/planView"

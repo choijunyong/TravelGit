@@ -59,7 +59,8 @@
             android:text="여행 추가"
             android:textAlignment="viewStart"
             android:textColor="#ffffff"
-            android:textSize="25sp"
+            android:textSize="23sp"
+            android:textStyle="bold"
             android:typeface="normal" />
 
         <ImageButton
@@ -80,6 +81,17 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TopLayout">
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="1dp"
+            android:layout_height="123dp"
+            android:layout_marginStart="150dp"
+            android:background=" #f8f8f8"
+            app:layout_constraintEnd_toEndOf="@+id/planView"
+            app:layout_constraintStart_toStartOf="@+id/planView"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="31dp" />
 
         <ImageView
             android:id="@+id/planView"
@@ -218,4 +230,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/InfoLayout" />
+
+
+
+
 </android.support.constraint.ConstraintLayout>

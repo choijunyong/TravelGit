@@ -219,7 +219,8 @@
             android:text="여행 추가"
             android:textAlignment="viewStart"
             android:textColor="#ffffff"
-            android:textSize="28sp"
+            android:textSize="23sp"
+            android:textStyle="bold"
             android:typeface="normal" />
 
         <ImageButton

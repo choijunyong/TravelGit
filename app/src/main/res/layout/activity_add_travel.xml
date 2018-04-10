@@ -84,7 +84,8 @@
             android:text="여행 추가"
             android:textAlignment="viewStart"
             android:textColor="#ffffff"
-            android:textSize="25sp"
+            android:textSize="23sp"
+            android:textStyle="bold"
             android:typeface="normal" />
 
         <ImageButton
@@ -101,6 +102,7 @@
         android:id="@+id/InfoLayout"
         android:layout_width="0dp"
         android:layout_height="184dp"
+        android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,24 +126,21 @@
             android:id="@+id/planView2"
             android:layout_width="296dp"
             android:layout_height="20dp"
-            android:background="@drawable/round"
+            android:background=" #f16461"
             app:layout_constraintBottom_toBottomOf="@+id/planView"
             app:layout_constraintEnd_toEndOf="@+id/planView"
             app:layout_constraintStart_toStartOf="@+id/planView"
-            app:srcCompat="@android:color/holo_red_light"
             tools:ignore="MissingConstraints" />
-
 
 
         <ImageView
             android:id="@+id/planView3"
             android:layout_width="296dp"
             android:layout_height="12dp"
-            android:background="@drawable/round"
+            android:background="#efefef"
             app:layout_constraintEnd_toEndOf="@+id/planView"
             app:layout_constraintStart_toStartOf="@+id/planView"
             app:layout_constraintTop_toTopOf="@+id/planView"
-            app:srcCompat="@android:color/darker_gray"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -238,6 +237,17 @@
             app:layout_constraintTop_toTopOf="@+id/numOfPeopleText"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ic_people" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="123dp"
+            android:layout_marginStart="150dp"
+            android:background=" #f8f8f8"
+            app:layout_constraintEnd_toEndOf="@+id/planView"
+            app:layout_constraintStart_toStartOf="@+id/planView"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="31dp" />
     </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
