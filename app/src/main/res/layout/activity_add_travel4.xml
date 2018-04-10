@@ -124,7 +124,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/planView"
             app:layout_constraintEnd_toEndOf="@+id/planView"
             app:layout_constraintStart_toStartOf="@+id/planView"
-            app:srcCompat="#f16461"
+            app:srcCompat="@android:color/holo_red_light"
             tools:ignore="MissingConstraints" />
 
         <ImageView
@@ -134,7 +134,7 @@
             app:layout_constraintEnd_toEndOf="@+id/planView"
             app:layout_constraintStart_toStartOf="@+id/planView"
             app:layout_constraintTop_toTopOf="@+id/planView"
-            app:srcCompat="#efefef"
+            app:srcCompat="@android:color/darker_gray"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -241,7 +241,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="20dp"
             android:background="@android:color/darker_gray"
-            android:backgroundTintMode="#efefef"
+            android:backgroundTintMode="@android:color/darker_gray"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
