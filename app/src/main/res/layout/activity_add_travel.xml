@@ -6,116 +6,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/BottomLayout"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/previousButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#efefef"
-            android:text="이전"
-            android:textColor="#9b9b9b"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/nextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#efefef"
-            android:text="다음"
-            android:textColor="#9b9b9b"
-            android:textSize="16sp" />
-    </LinearLayout>
-
-    <ScrollView
-        android:id="@+id/ScrollView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/BottomLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InfoLayout"
-        app:layout_constraintVertical_bias="0.056">
-
-        <LinearLayout
-            android:id="@+id/Vertical_in_Scroll"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <SearchView
-                android:layout_width="296dp"
-                android:layout_height="32dp"
-                android:visibility="visible"
-                tools:layout_editor_absoluteX="53dp"
-                tools:layout_editor_absoluteY="521dp" />
-        </LinearLayout>
-    </ScrollView>
-
-    <LinearLayout
-        android:id="@+id/TopLayout"
-        android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:background="#f16461"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="0dp">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:paddingBottom="10dp"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
-            android:text="여행 추가"
-            android:textAlignment="viewStart"
-            android:textColor="#ffffff"
-            android:textSize="23sp"
-            android:textStyle="bold"
-            android:typeface="normal" />
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/ic_close" />
-
-    </LinearLayout>
-
     <android.support.constraint.ConstraintLayout
         android:id="@+id/InfoLayout"
         android:layout_width="0dp"
-        android:layout_height="184dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
+        android:paddingBottom="0dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TopLayout">
 
         <ImageView
             android:id="@+id/planView"
-            android:layout_width="296dp"
+            android:layout_width="0dp"
             android:layout_height="123dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/round"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -124,7 +34,7 @@
 
         <ImageView
             android:id="@+id/planView2"
-            android:layout_width="296dp"
+            android:layout_width="0dp"
             android:layout_height="20dp"
             android:background=" #f16461"
             app:layout_constraintBottom_toBottomOf="@+id/planView"
@@ -135,7 +45,7 @@
 
         <ImageView
             android:id="@+id/planView3"
-            android:layout_width="296dp"
+            android:layout_width="0dp"
             android:layout_height="12dp"
             android:background="#efefef"
             app:layout_constraintEnd_toEndOf="@+id/planView"
@@ -241,13 +151,104 @@
         <View
             android:id="@+id/divider"
             android:layout_width="1dp"
-            android:layout_height="123dp"
-            android:layout_marginStart="150dp"
+            android:layout_height="140dp"
             android:background=" #f8f8f8"
-            app:layout_constraintEnd_toEndOf="@+id/planView"
-            app:layout_constraintStart_toStartOf="@+id/planView"
+            app:layout_constraintBottom_toBottomOf="@+id/planView2"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="31dp" />
+            tools:layout_editor_absoluteX="247dp" />
     </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/BottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/previousButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#efefef"
+            android:text="이전"
+            android:textColor="#9b9b9b"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#efefef"
+            android:text="다음"
+            android:textColor="#9b9b9b"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InfoLayout">
+
+        <LinearLayout
+            android:id="@+id/Vertical_in_Scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <SearchView
+                android:layout_width="296dp"
+                android:layout_height="32dp"
+                android:visibility="visible"
+                tools:layout_editor_absoluteX="53dp"
+                tools:layout_editor_absoluteY="521dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/TopLayout"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#f16461"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="여행 추가"
+            android:textAlignment="viewStart"
+            android:textColor="#ffffff"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_close" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

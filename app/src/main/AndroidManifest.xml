@@ -29,6 +29,12 @@
         <activity android:name=".ui.addTravelActivity" />
 
         <activity android:name=".ui.addTravel2Activity" />
+
+        <activity android:name=".ui.addTravel3Activity" />
+
+        <activity android:name=".ui.addTravel4Activity" />
+
+
     </application>
 
 
