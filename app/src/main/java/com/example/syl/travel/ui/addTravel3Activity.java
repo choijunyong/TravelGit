@@ -81,22 +81,23 @@ public class addTravel3Activity extends AppCompatActivity {
                         {
                             if(count[i]==0)
                             {
-                                for(int k=0; k<=i; k++)
-                                {
-                                    personButton[k].setImageResource(R.drawable.ic_man);
+                                for(int j=0; j<=i; j++) {
+                                    personButton[j].setImageResource(R.drawable.ic_man);
                                 }
-                                for(int j=i+1; j<7; j++ )
-                                {
-                                    personButton[j].setImageResource(R.drawable.ic_empty);
-                                    count[j]=0;
+                                for(int k=i+1; k<7; k++ ) {
+                                    personButton[k].setImageResource(R.drawable.ic_empty);
+                                    count[k]=0;
                                 }
-                                count[i]=1;
+                                for(int l=0; l<7; l++) {
+                                    count[l]=0;
+                                }
+                                count[i] = 1; //누른 버튼만 count 1로 셋팅
                                 totalNum.setText("총 "+ (i+1) +" 명");
                             }
                             else {
-                                for(int k=0; k<=i; k++)
+                                for(int j=0; j<=i; j++)
                                 {
-                                    personButton[k].setImageResource(R.drawable.ic_empty);
+                                    personButton[j].setImageResource(R.drawable.ic_empty);
                                 }
                                 totalNum.setText("총 0 명");
                                 count[i]=0;
