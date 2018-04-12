@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 
 import com.example.syl.travel.R;
@@ -60,6 +61,7 @@ public class addTravel3Activity extends AppCompatActivity {
         /*********************Click personButton   &&    Change the textfield***********************/
         final ImageButton []personButton= new ImageButton[7];
         int []personId= {R.id.person1,R.id.person2,R.id.person3,R.id.person4,R.id.person5,R.id.person6,R.id.person7};
+        final TextView totalNum = (TextView) findViewById(R.id.totalNumText);
 
         //Input the button Id to personButton[]
         for(int i = 0; i < 7; i++)
@@ -89,15 +91,14 @@ public class addTravel3Activity extends AppCompatActivity {
                                     count[j]=0;
                                 }
                                 count[i]=1;
-                                personNum=i+1;
-                                System.out.println("확인용: personNum="+personNum+"명===================================");
+                                totalNum.setText("총 "+ (i+1) +" 명");
                             }
                             else {
                                 for(int k=0; k<=i; k++)
                                 {
                                     personButton[k].setImageResource(R.drawable.ic_empty);
                                 }
-                                personNum=0;
+                                totalNum.setText("총 0 명");
                                 count[i]=0;
                             }
                         }

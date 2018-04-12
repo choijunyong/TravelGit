@@ -289,12 +289,12 @@
         app:layout_constraintTop_toBottomOf="@+id/ChoosePeopleLayout">
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/totalNumText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="8dp"
             android:paddingTop="20dp"
-            android:text="총 N 명"
+            android:text="총 0 명"
             android:textAlignment="center"
             android:textColor="@android:color/background_light" />
     </LinearLayout>
