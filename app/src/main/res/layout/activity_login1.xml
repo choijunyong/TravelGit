@@ -10,6 +10,7 @@
         android:id="@+id/emailLoginButton"
         android:layout_width="200dp"
         android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="20dp"
         android:background="#f16461"
         android:text="이메일로 로그인"
@@ -80,8 +81,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground">
-    </ImageView>
+        app:srcCompat="@drawable/ic_launcher_foreground"></ImageView>
 
 
 
