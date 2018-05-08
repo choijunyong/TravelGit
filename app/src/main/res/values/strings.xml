@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Travel</string>
+    <string name="facebook_app_id">2110269432591243</string> //facebook App_id
+
 </resources>
