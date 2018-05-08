@@ -13,8 +13,7 @@ import com.example.syl.travel.R;
 
 public class addTravel3Activity extends AppCompatActivity {
 
-    static int []count= new int[]{0, 0, 0, 0, 0,0,0};
-    static int personNum=0;
+    static int []count= new int[]{0, 0, 0, 0, 0, 0, 0};
     private View.OnClickListener btnListener;
 
 
