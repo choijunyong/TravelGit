@@ -2,4 +2,5 @@
     <string name="app_name">Travel</string>
     <string name="facebook_app_id">2110269432591243</string> //facebook App_id
 
+    <string name="kakao_app_key">4a736acb930c6f3cfc2a180aeb7a5d20</string>
 </resources>
