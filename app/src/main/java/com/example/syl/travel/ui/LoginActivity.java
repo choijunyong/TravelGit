@@ -79,9 +79,11 @@ public class LoginActivity extends AppCompatActivity {
         kakaoLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Session session = Session.getCurrentSession();
                 session.addCallback(new SessionCallback());
                 session.open(AuthType.KAKAO_LOGIN_ALL, LoginActivity.this);
+
 
             }
         });
@@ -162,60 +164,40 @@ public class LoginActivity extends AppCompatActivity {
 
     public class SessionCallback implements ISessionCallback {
 
-
-
         // 로그인에 성공한 상태
-
         @Override
-
         public void onSessionOpened() {
 
-            requestMe();
+            requestMe();             // 사용자 정보 동의 화면
 
         }
 
-
-
         // 로그인에 실패한 상태
-
         @Override
 
         public void onSessionOpenFailed(KakaoException exception) {
             System.out.println("확인용===============================================로그인 실패..=============");
             Log.e("SessionCallback :: ", "onSessionOpenFailed : " + exception.getMessage());
-
         }
 
-
-
         // 사용자 정보 요청
-
         public void requestMe() {
 
             // 사용자정보 요청 결과에 대한 Callback
-
             UserManagement.getInstance().requestMe(new MeResponseCallback() {
 
                 // 세션 오픈 실패. 세션이 삭제된 경우,
-
                 @Override
-
                 public void onSessionClosed(ErrorResult errorResult) {
                     System.out.println("확인용===============================================onSessionClosed 메서드지남");
                     Log.e("SessionCallback :: ", "onSessionClosed : " + errorResult.getErrorMessage());
 
                 }
 
-
-
                 // 회원이 아닌 경우,
-
                 @Override
-
                 public void onNotSignedUp() {
-
                     Log.e("SessionCallback :: ", "onNotSignedUp");
-
                 }
 
 
@@ -223,45 +205,33 @@ public class LoginActivity extends AppCompatActivity {
                 // 사용자정보 요청에 성공한 경우,
 
                 @Override
-
                 public void onSuccess(UserProfile userProfile) {
-
-
 
                     Log.e("SessionCallback :: ", "onSuccess");
 
-
-
                     String nickname = userProfile.getNickname();
-
                     String email = userProfile.getEmail();
-
                     String profileImagePath = userProfile.getProfileImagePath();
-
                     String thumnailPath = userProfile.getThumbnailImagePath();
-
                     String UUID = userProfile.getUUID();
 
                     long id = userProfile.getId();
 
-
-
                     Log.e("Profile : ", nickname + "");
-
                     Log.e("Profile : ", email + "");
-
                     Log.e("Profile : ", profileImagePath  + "");
-
                     Log.e("Profile : ", thumnailPath + "");
-
                     Log.e("Profile : ", UUID + "");
-
                     Log.e("Profile : ", id + "");
+
                     System.out.println("확인용===============================================o성공!!!!!!!!!!!!!!!");
 
-                    Intent kakaoIntent = new Intent(LoginActivity.this, MainActivity.class);
+
+                    /* 성공시 메인화면   */
+                    Intent kakaoIntent = new Intent(LoginActivity.this, MainActivity.class);  //로그인 성공시 메인화면으로 전환
                     startActivity(kakaoIntent);
                     finish();
+
                 }
 
 
@@ -269,20 +239,12 @@ public class LoginActivity extends AppCompatActivity {
                 // 사용자 정보 요청 실패
 
                 @Override
-
                 public void onFailure(ErrorResult errorResult) {
-
                     Log.e("SessionCallback :: ", "onFailure : " + errorResult.getErrorMessage());
-
                 }
-
             });
-
         }
-
     }
-
-
 }
 
 
